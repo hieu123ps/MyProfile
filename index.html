@@ -14,7 +14,7 @@
   <script src="js/jquery.js"></script>
   <title>Index</title>
 </head>
-<body>
+<body onload="readTextFile()">
   <div id="root"></div>
     <header></header>
 <br>
@@ -28,6 +28,7 @@
 </section>
 <br>
 <footer></footer>
+    <div id = "textSection"></div>
 </body>
 <script>
   $.ajax({
