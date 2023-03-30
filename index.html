@@ -39,6 +39,19 @@
     $("html").append(response);
   });
   </script>
+     <script>
+    function readTextFile() {
+  var rawFile = new XMLHttpRequest();
+  rawFile.open("GET", "index.php", true);
+  rawFile.onreadystatechange = function() {
+    if (rawFile.readyState === 4) {
+      var allText = rawFile.responseText;
+      document.getElementById("textSection").innerHTML = allText;
+    }
+  }
+  rawFile.send();
+}
+  </script>
   
  <script  type="module" src="index.js" ></script> 
 </html>
